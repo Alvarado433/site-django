@@ -1,0 +1,158 @@
+# 📌 Requisitos
+
+- **Python 3 ou superior**  
+  Verifique a versão:
+  ```sh
+  python --version
+  ```
+
+- **Django 5 ou superior**  
+  Verifique a versão:
+  ```sh
+  django-admin --version
+  ```
+
+- **MySQL 8 ou superior**  
+  Verifique a versão:
+  ```sh
+  mysql --version
+  ```
+
+---
+
+# 🚀 Como rodar o projeto
+
+> **⚠️ Atenção:** Antes de rodar o projeto, altere as credenciais do banco de dados no arquivo `settings.py`.
+
+```python
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'teste',
+    'USER': 'RHAIAN',  # Deve estar em maiúsculas
+    'PASSWORD': 'Alvarado209',  # Senha correta
+    'HOST': 'localhost',
+    'PORT': '3306',  # "PORTA" deve ser "PORT"
+}
+```
+
+Execute os seguintes comandos:
+```sh
+python manage.py migrate
+python manage.py runserver
+```
+
+Acesse o projeto no navegador:  
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+---
+
+# 🔧 Configuração do Ambiente Virtual
+
+### Criar a máquina virtual do Python:
+```sh
+python -m venv projeto
+```
+
+### Ativar a máquina virtual:
+```sh
+projeto\Scripts\Activate  # Windows
+source projeto/bin/activate  # Mac/Linux
+```
+
+## Gerar aquivo com as dependecias 
+apos instalar a depedencia, execute o comando abaixo:
+
+```
+    pip freeze > bibiotecas.txt
+```
+---
+
+# 📌 Passo a passo para criar o projeto Django
+
+### 1️⃣ Instalar o Django
+```sh
+pip install django
+```
+
+### 2️⃣ Criar o projeto Django
+```sh
+django-admin startproject projeto .
+```
+
+### 3️⃣ Rodar o servidor
+```sh
+python manage.py runserver
+```
+
+---
+
+# 🗄️ Banco de Dados
+
+### Criar o banco de dados MySQL
+```sql
+CREATE DATABASE teste CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+### Instalar o conector do MySQL
+```sh
+pip install mysqlclient
+```
+
+> **⚠️ Atenção:** Alterar as credenciais do banco no `settings.py` conforme mostrado anteriormente.
+
+### Aplicar as migrations para criar as tabelas
+```sh
+python manage.py migrate
+```
+
+---
+
+# 🌍 Configuração de idioma e fuso horário
+
+No arquivo `settings.py`, altere as seguintes configurações:
+```python
+LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
+```
+
+---
+
+# 🔑 Criar um superusuário
+
+```sh
+python manage.py createsuperuser
+```
+
+Exemplo de criação de superusuário:
+```
+Usuário (leave blank to use 'rhaianalvarado'): rhaian
+Endereço de email: alvaradorhaian766@gmail.com 
+Password: Alvarado209
+Password (again): 
+Superuser created successfully.
+```
+
+Acesse o painel administrativo em:  
+[http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+---
+
+# criar um novo app
+```
+python manage.py startapp app ou nome-do-app
+```
+
+# criar o migrations
+----
+```
+python manage.py NOME-DO-APP app --name nome-da-migration
+```
+```
+python manage.py makemigrations app --name teste
+```
+
+## como usar o github
+Inicializar um novo repositorio Git
+```
+git init
+```
