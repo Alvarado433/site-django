@@ -156,3 +156,36 @@ Inicializar um novo repositorio Git
 ```
 git init
 ```
+adicionar todos os arquivos modificados na area de preparaçao
+```
+git add .
+```
+
+commit registra as alteraçoes feitas nos aquivosque fortam adicionados 
+
+```
+git commit -m "base do projeto"
+```
+
+
+verifica em qual branch esta.
+
+```
+git branch"
+```
+
+
+renomear a branch atual no git para main
+
+```
+git commit -m "base do projeto"
+```
+
+adicionar um repositorio remoto ao repositorio local
+```
+git remote add origin https://github.com/Alvarado433/site-django.git
+```
+enviar os commit locais para um repositorio remoto
+```
+git push -u origin main
+```
